@@ -1,0 +1,671 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  background-color: #222;
+}
+/* Nav part */
+.bashliq-header {
+  margin-left: 4rem;
+}
+nav span {
+  font-size: 32px;
+  font-weight: 400;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav {
+  display: flex;
+  height: 65px;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blueviolet;
+  opacity: 0.8;
+  z-index: 999;
+  transition: 500ms all;
+}
+.navbar-ul {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+  transition: 0.5s all;
+  margin-right: 2rem;
+}
+nav ul li {
+  font-size: 20px;
+  color: #fff;
+  margin-right: 1.2rem;
+  font-family: 'Poor Story', cursive;
+}
+.header-responsive-div {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-right: 1.3rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.header-responsive-div>div {
+  width: 80%;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.5s all;
+}
+nav.active .header-responsive-div .nav-res-btn2 {
+  opacity: 0;
+}
+nav.active .header-responsive-div .nav-res-btn1 {
+  transform: rotate(45deg) translate(7px, 10px);
+}
+nav.active .header-responsive-div .nav-res-btn3 {
+  transform: rotate(-45deg) translate(7px, -10px);
+}
+nav.active .navbar-ul {
+  position: absolute;
+  top: 65px;
+  width: 100%;
+  left: 0;
+  background: rgb(54, 54, 86);
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+nav.active .navbar-ul a {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .navbar-ul {
+    display: none;
+  }
+
+  .header-responsive-div {
+    display: flex;
+  }
+
+  .bashliq-header {
+    margin-left: 2.5rem;
+  }
+}
+
+/* Nav part */
+
+/* Menu part */
+.menu-all-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250vh;
+  padding-top: 100px;
+}
+
+.menu-small-div {
+  width: 80%;
+  height: 95%;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-word-div {
+  width: 12rem;
+  height: 3.2rem;
+  border-radius: 30px;
+  background-color: #222;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-word-div span {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.eat-drink-all-div {
+  height: 90%;
+  width: 85%;
+  background-color: #222;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.eat-all-div,
+.drink-all-div {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.eat-all-div {
+  border-bottom: solid 2px #fff;
+}
+
+.eat-header-div,
+.drink-header-div {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  min-height: 40px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+}
+
+.eat-header-div button,
+.drink-header-div button {
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: 2s all;
+  font-family: 'Xanh Mono', monospace;
+  margin: 0 25px;
+}
+.eat-header-div button:hover,
+.drink-header-div button:hover{
+  background-color: #fff;
+  color: #222;
+  border-radius: 15px;
+}
+
+.infomation-eat-all-div,
+.infomation-drinks-all-div {
+  height: 75%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.national-infomation-eat-div {
+  width: 100%;
+  height: 100%;
+}
+
+.foreign-infomation-eat-div {
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.infomation-box-div {
+  height: 33.3%;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+.infomation-p-img {
+  display: flex;
+  width: 95%;
+  height: 95%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infomation-p-img p {
+  font-size: 16.5px;
+  font-family: 'Kolker Brush', cursive;
+  color: #fff;
+}
+
+.infomation-box-div img {
+  width: 6.2rem;
+  height: 6.2rem;
+  /* padding: 0 15px; */
+  border-radius: 50%;
+}
+
+.infomation-box-div:nth-child(3) {
+  border-bottom: 0px;
+}
+
+.more-eat-div,
+.more-drink-div {
+  width: 100px;
+  height: 35px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  transition: 1s all;
+  align-items: center;
+}
+.more-eat-div button,
+.more-drink-div button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+}
+
+.eat-drink-all-div button {
+  color: #fff;
+}
+
+.non-alcoholic-drink {
+  width: 75%;
+  height: 75%;
+}
+
+.alcoholic-drink {
+  width: 75%;
+  height: 75%;
+  display: none;
+}
+
+.drink-info-div {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 180px 180px;
+  gap: 40px;
+}
+.drink-boxs {
+  border-radius: 15px;
+  border: 2px solid #fff;
+  transition: 0.6s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drink-boxs img {
+  background-size: cover;
+  width: 80%;
+  height: 90%;
+}
+
+.drink-boxs:hover {
+  border: 2px solid blueviolet;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .menu-small-div {
+    width: 95%;
+  }
+
+  .eat-drink-all-div {
+    width: 95%;
+  }
+  .drink-info-div {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    height: 100%; 
+    grid-template-columns: 0.3fr 0.3fr;
+    grid-template-rows: 100px 100px 100px;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 412px) {
+  .eat-drink-all-div button{
+    font-size: 15px;
+  }
+  .infomation-p-img p{
+    font-size: 13px;
+  }
+  .drink-info-div {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 120px 120px 120px;
+  }
+}
+/* Menu part */
+
+
+/* Reservation part */
+.reservation-all-div{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.reservation-small-div{
+  width: 80%;
+  height: 90%;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.reservation-word-header{
+  width: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reservation-word-header span{
+  font-size: 25px;
+  color: #fff;
+  font-family: 'Lobster', cursive;
+}
+.reservation-infomatio-all{
+  height: 85%;
+  margin-top: 15px;
+  width: 100%;
+}
+.reservation-infomatio-small{
+  height: 100%;
+  width: 100%;
+  border: 2px solid;
+  border-color: rgb(188, 18, 125);
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 40px 40px 40px;
+  align-content: center;
+  justify-content: center;
+  row-gap: 50px;
+}
+.input-div{
+  height: 4rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.btn-sent-div{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+}
+.btn-sent-div button{
+  width: 120px;
+  height: 35px;
+  font-size: 20px;
+  background: none;
+  color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.5s all ease;
+}
+.btn-sent-div button:hover{
+  color: rgb(188, 18, 125);
+  border-color: rgb(188, 18, 125);
+}
+.input-div input{
+  height: 25px;
+  margin-top: 5px;
+  width: 60%;
+}
+.input-div label{
+  font-size: 16px;
+  font-family: 'Rubik Bubbles', cursive;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .reservation-infomatio-small{
+    grid-template-columns: 80%;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px;
+    align-content: center;
+    justify-content: center;
+    row-gap: 50px;
+  }
+  .reservation-all-div{
+    height: 110vh;
+  }
+  .input-div{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .btn-sent-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+  }
+  }
+/* Reservation part */
+
+
+/* About part */
+.about-all-div{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.small-about-div{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.header-about-div{
+  width: 40%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-about-div span{
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Lobster', cursive;
+}
+.infomation-photos-all-div{
+  height: 85%;
+  width: 70%;
+  border: #fff solid 2px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+}
+.about-divs{
+  height: 87%;
+  width: 100%;
+  margin-top: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.infomation-restaurant p{
+  color: #fff;
+  padding: 10px 30px;
+}
+.header-about-btns-div{
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-about-btns-div button{
+  width: 140px;
+  margin: 0 25px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Dancing Script', cursive;
+  font-size: 18px;
+  height: 35px;
+}
+.infomation-photos{
+  display: none;
+  grid-template-rows: 45% 45% 45%;
+  grid-template-columns: 32% 32% 32%;
+  gap: 15px;
+}
+.infomation-photos img{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  transition: 0.5s all ease-in-out;
+}
+.infomation-photos img:hover{
+  transform: scale(1.1);
+  overflow: hidden;
+}
+@media screen and (max-width: 768px){
+  .infomation-photos-all-div{
+    height: 85%;
+    width: 90%;
+  }
+  .infomation-photos{
+    display: none;
+    grid-template-rows: 35% 35% 35%;
+    grid-template-columns: 32% 32% 32%;
+  }
+}
+@media screen and (max-width: 501px){
+  .infomation-photos{
+    display: none;
+    grid-template-rows: 32% 32% 32% 32%;
+    grid-template-columns: 50% 50%;
+  }
+  .infomation-photos img:hover{
+    transform: scale(1);
+  }
+}
+/* About part */
+
+/* Contact part */
+.contact-all-div{
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.contact-small-div{
+  width: 100%;
+  height: 85%;
+  background-color: rgb(23, 21, 21);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.end-mini-div{
+  height: 50%;
+  width: 80%;
+  padding: 10px;
+}
+.end-mini-div:nth-child(1){
+  border-bottom: 1px solid #fff;
+}
+.restauran_name-div{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.restauran-name-div{
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.restauran-name-div span:nth-child(1){
+  font-size: 38px;
+  color: #fff;
+  font-family: 'Playfair Display SC', serif;
+}
+.restauran-name-div span:nth-child(2){
+  font-size: 25px;
+  font-stretch: extra-expanded;
+  margin-top: -5px;
+  color: #fff;
+  font-family: 'Playfair Display SC', serif;
+}
+
+.sosial_media-place_number-div{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sosial_media-place_number-div a{
+  color: #fff;
+  font-size: 20px;
+  margin: 0 10px 0 10px;
+  transition: 0.5s all;
+}
+.sosial_media-place_number-div a:nth-child(1){
+  margin-left: 0;
+}
+
+
+.sosial_media-place_number-div a:hover{
+  color: blueviolet;
+}
+.place-number-div{
+  display: flex;
+}
+.place-number-div p{
+  color: #fff;
+  font-size: 17px;
+  margin: 0 10px 0 10px;
+}
+.place-number-div p:nth-child(1){
+  margin-left: 0;
+}
+@media screen and (max-width: 768px){
+  .sosial_media-place_number-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .place-number-div{
+    margin-top: 15px;
+  }
+}
+
+/* Contact part */
